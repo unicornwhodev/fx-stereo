@@ -1,0 +1,13 @@
+{
+  "plugin": "Musique Stereo",
+  "presets": [
+    {"name":"Mono Safe Utility", "width":100.0, "balance":0.0, "mid_gain":0.0, "side_gain":0.0, "bass_mono":120.0, "haas":0.0, "mix":100.0, "output":0.0, "bypass":false, "mono":false},
+    {"name":"Mix Bus Wide", "width":122.0, "balance":0.0, "mid_gain":0.0, "side_gain":1.4, "bass_mono":110.0, "haas":0.0, "mix":100.0, "output":-0.5, "bypass":false, "mono":false},
+    {"name":"Vocal Center Focus", "width":78.0, "balance":0.0, "mid_gain":1.2, "side_gain":-2.5, "bass_mono":150.0, "haas":0.0, "mix":100.0, "output":0.0, "bypass":false, "mono":false},
+    {"name":"Pad Expander Side", "width":148.0, "balance":0.0, "mid_gain":-0.6, "side_gain":2.8, "bass_mono":135.0, "haas":7.5, "mix":92.0, "output":-1.2, "bypass":false, "mono":false},
+    {"name":"Overheads Open", "width":132.0, "balance":0.0, "mid_gain":-0.4, "side_gain":2.0, "bass_mono":180.0, "haas":3.8, "mix":100.0, "output":-0.8, "bypass":false, "mono":false},
+    {"name":"Bass Mono Tight", "width":92.0, "balance":0.0, "mid_gain":0.8, "side_gain":-0.8, "bass_mono":185.0, "haas":0.0, "mix":100.0, "output":0.0, "bypass":false, "mono":true},
+    {"name":"Parallel Image Lift", "width":138.0, "balance":0.0, "mid_gain":0.0, "side_gain":2.2, "bass_mono":120.0, "haas":4.8, "mix":58.0, "output":0.0, "bypass":false, "mono":false},
+    {"name":"Asymmetric Balance", "width":110.0, "balance":18.0, "mid_gain":0.0, "side_gain":0.8, "bass_mono":125.0, "haas":1.8, "mix":100.0, "output":-0.4, "bypass":false, "mono":false}
+  ]
+}
