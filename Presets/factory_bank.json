@@ -8,6 +8,16 @@
     {"name":"Overheads Open", "width":132.0, "balance":0.0, "mid_gain":-0.4, "side_gain":2.0, "bass_mono":180.0, "haas":3.8, "mix":100.0, "output":-0.8, "bypass":false, "mono":false},
     {"name":"Bass Mono Tight", "width":92.0, "balance":0.0, "mid_gain":0.8, "side_gain":-0.8, "bass_mono":185.0, "haas":0.0, "mix":100.0, "output":0.0, "bypass":false, "mono":true},
     {"name":"Parallel Image Lift", "width":138.0, "balance":0.0, "mid_gain":0.0, "side_gain":2.2, "bass_mono":120.0, "haas":4.8, "mix":58.0, "output":0.0, "bypass":false, "mono":false},
-    {"name":"Asymmetric Balance", "width":110.0, "balance":18.0, "mid_gain":0.0, "side_gain":0.8, "bass_mono":125.0, "haas":1.8, "mix":100.0, "output":-0.4, "bypass":false, "mono":false}
+    {"name":"Asymmetric Balance", "width":110.0, "balance":18.0, "mid_gain":0.0, "side_gain":0.8, "bass_mono":125.0, "haas":1.8, "mix":100.0, "output":-0.4, "bypass":false, "mono":false},
+    {"name":"Haas - Wide Micro Shift", "engine":1, "variant":1, "haas_time":8.5, "haas_side":82.0, "haas_tone":58.0, "haas_feedback":4.0, "wide_safety":62.0, "mix":72.0, "output":-0.8, "bypass":false, "mono":false},
+    {"name":"Haas - Mono Safe Edge", "engine":1, "variant":2, "haas_time":5.8, "haas_side":48.0, "haas_tone":45.0, "haas_feedback":0.0, "wide_safety":86.0, "mix":60.0, "output":-0.4, "bypass":false, "mono":false},
+    {"name":"Frequency Imager - Mix Lift", "engine":2, "variant":0, "img_low":72.0, "img_mid":108.0, "img_high":136.0, "img_xover1":170.0, "img_xover2":3600.0, "wide_safety":60.0, "mix":100.0, "output":-0.6, "bypass":false, "mono":false},
+    {"name":"Frequency Imager - Air Open", "engine":2, "variant":2, "img_low":64.0, "img_mid":116.0, "img_high":155.0, "img_xover1":140.0, "img_xover2":4200.0, "wide_safety":54.0, "mix":92.0, "output":-1.0, "bypass":false, "mono":false},
+    {"name":"Spatial - Stage Depth", "engine":3, "variant":0, "spatial_depth":58.0, "spatial_angle":12.0, "spatial_air":42.0, "spatial_focus":54.0, "width":118.0, "mix":88.0, "output":-0.8, "bypass":false, "mono":false},
+    {"name":"Spatial - Focused Air", "engine":3, "variant":2, "spatial_depth":36.0, "spatial_angle":-8.0, "spatial_air":68.0, "spatial_focus":68.0, "width":108.0, "mix":76.0, "output":-0.5, "bypass":false, "mono":false},
+    {"name":"Mono Maker - Club Low", "engine":4, "variant":1, "mono_freq":165.0, "mono_strength":92.0, "mono_slope":72.0, "mono_audition":0.0, "width":104.0, "mix":100.0, "output":0.0, "bypass":false, "mono":false},
+    {"name":"Mono Maker - Audit Sides", "engine":4, "variant":2, "mono_freq":130.0, "mono_strength":80.0, "mono_slope":58.0, "mono_audition":1.0, "width":100.0, "mix":70.0, "output":-1.0, "bypass":false, "mono":false},
+    {"name":"Correlation - Guard Rail", "engine":5, "variant":1, "corr_hold":65.0, "corr_decay":45.0, "corr_zoom":58.0, "corr_warn":72.0, "balance":0.0, "mix":100.0, "output":0.0, "bypass":false, "mono":false},
+    {"name":"Correlation - Utility Meter", "engine":5, "variant":0, "corr_hold":40.0, "corr_decay":62.0, "corr_zoom":80.0, "corr_warn":0.0, "balance":0.0, "mix":100.0, "output":0.0, "bypass":false, "mono":false}
   ]
 }

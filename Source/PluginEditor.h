@@ -17,9 +17,16 @@ private:
     using APVTS = juce::AudioProcessorValueTreeState;
     using SliderAttach = APVTS::SliderAttachment;
     using ButtonAttach = APVTS::ButtonAttachment;
+    using ComboAttach = APVTS::ComboBoxAttachment;
 
     void timerCallback() override;
     void paintVisualization(juce::Graphics&, juce::Rectangle<int> area);
+    void refreshPresetBox();
+    void refreshEngineUi();
+    void attachKnobsForEngine(int engine);
+    void setupSlider(juce::Slider&, juce::Label&, const juce::String&);
+    void storeCurrentABSlot();
+    void recallABSlot(bool slotA);
 
     MusiqueStereoProcessor& proc;
     fx::FXLookAndFeel lnf { fx::accent::pitch };
@@ -27,16 +34,16 @@ private:
     // Header
     juce::Label titleLabel;
     juce::Image pluginIcon, logoImg;
-    juce::TextButton bypassBtn{"Bypass"}, monoBtn{"Mono"}, osBtn{"OS"}, settingsBtn{juce::CharPointer_UTF8("\xe2\x9a\x99")};
+    juce::TextButton bypassBtn{"Bypass"}, monoBtn{"Mono"}, statusBtn{"MONO OK"}, actionBtn{"MONITOR"};
 
     // Preset bar
     juce::TextButton prevBtn{"<"}, nextBtn{">"}, saveBtn{"Save"}, abBtn{"A/B"};
-    juce::ComboBox presetBox;
+    juce::ComboBox presetBox, engineBox, variantBox;
     std::shared_ptr<juce::Array<juce::var>> presets;
 
-    // 6 knobs: Width, Balance, Mid Gain, Side Gain, Bass Mono, Haas
-    juce::Slider knobs[6];
-    juce::Label knobLabels[6];
+    static constexpr int numKnobs = 6;
+    juce::Slider knobs[numKnobs];
+    juce::Label knobLabels[numKnobs];
 
     // Footer
     fx::MeterComponent inMeter, outMeter;
@@ -48,8 +55,14 @@ private:
     float phase = 0.0f;
 
     // Attachments
-    std::unique_ptr<SliderAttach> widthAtt, balAtt, midAtt, sideAtt, bassAtt, haasAtt, mixAtt, outAtt;
+    std::array<std::unique_ptr<SliderAttach>, numKnobs> knobAtts;
+    std::unique_ptr<SliderAttach> outAtt;
     std::unique_ptr<ButtonAttach> bypassAtt, monoAtt;
+    std::unique_ptr<ComboAttach> engineAtt;
+    juce::ValueTree abStateA, abStateB;
+    bool showingA = true;
+    int lastEngine = -1;
+    int lastVariant = -1;
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR(MusiqueStereoEditor)
 };
